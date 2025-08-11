@@ -19,6 +19,11 @@
   "homepage": "https://github.com/ecolab-web3/ecolab-token-contract#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@openzeppelin/hardhat-upgrades": "^3.9.1",
     "hardhat": "^2.26.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^5.4.0",
+    "dotenv": "^17.2.1"
   }
 }
