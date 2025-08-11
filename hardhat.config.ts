@@ -8,7 +8,7 @@ const FUJI_RPC_URL = process.env.FUJI_RPC_URL || "https://api.avax-test.network/
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "your-private-key";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.20",
+  solidity: "0.8.24",
   networks: {
     // Configuration for the Avalanche Fuji testnet
     fuji: {
