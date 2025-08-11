@@ -6,11 +6,9 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 /**
- * @title EcolabToken
- * @author E-co.lab Development Team
- * @version 1.1.0 
- * @notice This is the core contract for the E-co.lab ecosystem, designed to be upgradeable...
- * @dev Flexible version supporting dynamic initialization for different environments.
+ * @title EcolabToken (V1.1.0)
+ * @notice This is the core contract for the E-co.lab ecosystem, designed to be upgradeable.
+ * @dev Developed by the E-co.lab Team. Flexible version supporting dynamic initialization.
  * @custom:oz-upgrades-unsafe-allow constructor
  */
 contract EcolabToken is Initializable, ERC1155Upgradeable, OwnableUpgradeable {
