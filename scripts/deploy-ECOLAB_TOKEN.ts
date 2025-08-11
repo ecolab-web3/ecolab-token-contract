@@ -1,38 +1,30 @@
-import { ethers, upgrades } from "hardhat";
-
 async function main() {
-  // Get the signer (wallet) that will be deploying the contract
-  const [deployer] = await ethers.getSigners();
-  console.log("Deploying contracts with the account:", deployer.address);
+    const [deployer] = await ethers.getSigners();
+    console.log("Deploying contracts with the account:", deployer.address);
 
-  // Get the ContractFactory for our EcolabToken
-  const EcolabToken = await ethers.getContractFactory("EcolabToken");
-  
-  console.log("Deploying EcolabToken as an upgradeable proxy...");
-  
-  // This is the core function. It deploys our implementation contract,
-  // deploys the proxy contract, and links them together.
-  // It also calls the 'initialize' function with the provided arguments.
-  const ecolabTokenProxy = await upgrades.deployProxy(
-    EcolabToken,
-    [deployer.address], // Arguments for the `initialize` function: [initialOwner]
-    { 
-      initializer: 'initialize', 
-      kind: 'uups' // Specifies the UUPS proxy pattern, which is more gas-efficient for upgrades.
-    }
-  );
+    // Define the arguments for the initializer function
+    const tokenName = "E-co.lab Fuji Test Token";
+    const tokenSymbol = "ECO_FUJI";
+    const tokenUri = "https://ecolab.foundation/api/testnet/metadata/{id}.json";
+    const initialOwner = deployer.address;
 
-  // Wait until the deployment transaction is mined
-  await ecolabTokenProxy.waitForDeployment();
+    const EcolabToken = await ethers.getContractFactory("EcolabToken");
   
-  // Get the address of the PROXY contract, which is the one we will interact with
-  const proxyAddress = await ecolabTokenProxy.getAddress();
-  console.log("EcolabToken (Proxy) deployed to:", proxyAddress);
+    console.log("Deploying EcolabToken as an upgradeable proxy...");
+  
+    const ecolabTokenProxy = await upgrades.deployProxy(
+      EcolabToken,
+      // Pass the arguments in the correct order
+      [initialOwner, tokenName, tokenSymbol, tokenUri], 
+      { 
+        initializer: 'initialize', 
+        kind: 'uups'
+      }
+    );
+
+    await ecolabTokenProxy.waitForDeployment();
+  
+    const proxyAddress = await ecolabTokenProxy.getAddress();
+    console.log("EcolabToken (Proxy) deployed to:", proxyAddress);
+    console.log(`Token Name: ${tokenName}, Symbol: ${tokenSymbol}`);
 }
-
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
