@@ -1,6 +1,9 @@
 node_modules
 .env
 
+# OpenZeppelin Upgrades plugin manifest
+.openzeppelin/
+
 # Hardhat files
 /cache
 /artifacts
