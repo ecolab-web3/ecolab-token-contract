@@ -1,9 +1,11 @@
 # E-co.lab Token Contract
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Solidity Version](https://img.shields.io/badge/Solidity-^0.8.24-blue.svg)
-![Framework](https://img.shields.io/badge/Framework-Hardhat-orange.svg)
-![Standard](https://img.shields.io/badge/Standard-ERC1155-lightgrey.svg)
+![Language](https://img.shields.io/badge/Language-Solidity-orange)
+![Blockchain](https://img.shields.io/badge/Blockchain-Avalanche_Fuji-red)
+![Verified Contract](https://img.shields.io/badge/Contract-Verified-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Solidity Version](https://img.shields.io/badge/Solidity-0.8.24-yellow.svg)
+![Framework](https://img.shields.io/badge/Framework-Hardhat-purple.svg)
 
 ## About The Project
 
