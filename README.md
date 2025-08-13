@@ -7,6 +7,8 @@
 ![Solidity Version](https://img.shields.io/badge/Solidity-0.8.24-yellow.svg)
 ![Framework](https://img.shields.io/badge/Framework-Hardhat-purple.svg)
 
+___
+
 ## About The Project
 
 This repository contains the official Solidity smart contracts for the **E-co.lab Token ($ECO)**. This is the core token contract for the E-co.lab ecosystem, designed to manage both the primary fungible token ($ECO) and future Real-World Asset (RWA) tokens.
@@ -21,6 +23,8 @@ Built with **Hardhat** and **OpenZeppelin Contracts**.
 *   **Upgradeable (UUPS Proxies):** The contract logic can be updated to add new features or fix bugs without requiring a token migration.
 *   **Ownable Access Control:** Administrative functions like minting new tokens are restricted to a secure owner address, which will eventually be controlled by the E-co.lab DAO.
 *   **Flexible Initialization:** Supports different configurations for name, symbol, and metadata URI, allowing for distinct deployments on testnets and mainnet.
+
+___
 
 ## Getting Started
 
@@ -47,6 +51,8 @@ To get a local copy up and running, follow these simple steps.
     npm install
     ```
 
+___
+
 ## Usage
 
 This project uses Hardhat as its development environment for compiling, testing, and deploying smart contracts.
@@ -59,6 +65,8 @@ This project uses Hardhat as its development environment for compiling, testing,
     ```sh
     npx hardhat test
     ```
+
+___
 
 ## Testing
 
@@ -88,6 +96,8 @@ The test suite achieves 100% coverage for all executable lines of code and all f
 
 **Note on Branch Coverage:** The 93.75% branch coverage is an excellent and expected result. The small remaining portion is related to internal, edge-case checks within the inherited OpenZeppelin UUPSUpgradeable contract. Our tests fully cover **100% of all custom logic and security-critical branches**, including the `onlyOwner` checks on all administrative and upgrade functions.
 
+___
+
 ## Deployment
 
 The V1.1.0 of the EcolabToken contract has been successfully deployed and verified on the Avalanche Fuji Testnet.
@@ -101,11 +111,15 @@ The V1.1.0 of the EcolabToken contract has been successfully deployed and verifi
     `0x1beF1F515cb4E1EDa4AaDCCC7a4D3E9503889f97`
     *   *(Reason: Ownership has been permanently renounced due to an error in the initial deployment parameters.)*
 
+___
+
 ## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 Please feel free to fork the repo and create a pull request, or open an issue with the tag "enhancement".
+
+___
 
 ## License
 
