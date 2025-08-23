@@ -11,6 +11,15 @@ If you find our work valuable, please consider giving us a star on GitHub!
 
 ___
 
+## Official E-co.lab Links
+
+*   **Official Website:** [ecolab-web3.github.io](https://ecolab-web3.github.io/)
+*   **Whitepaper:** [e-co-lab.gitbook.io/whitepaper](https://e-co-lab.gitbook.io/whitepaper)
+*   **Discord Community:** [discord.gg/Q6BNyUDNtm](https://discord.gg/Q6BNyUDNtm)
+*   **Twitter:** [x.com/ecolab_web3](https://x.com/ecolab_web3)
+
+___
+
 ## About The Project
 
 This repository contains the official Solidity smart contracts for the **E-co.lab Token ($ECO)**. This is the core token contract for the E-co.lab ecosystem, designed to manage both the primary fungible token ($ECO) and future Real-World Asset (RWA) tokens.
